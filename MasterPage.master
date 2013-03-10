@@ -1,0 +1,23 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="theForm" runat="server">
+    <div>
+        <asp:contentplaceholder id="ContentPlaceHolder" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    <div style="margin-top:20px;">
+        <asp:LinkButton ID="btnSetGerman" runat="server" Text="Deutsch" CommandArgument="de-CH" OnClick="RequestLanguageChange_Click" meta:resourcekey="btnSetGermanResource1"></asp:LinkButton>&nbsp;&nbsp;
+        <asp:LinkButton ID="btnSetEnglish" runat="server" Text="English" CommandArgument="en-GB" OnClick="RequestLanguageChange_Click" meta:resourcekey="btnSetEnglishResource1"></asp:LinkButton>
+    </div>
+    </form>
+</body>
+</html>
